@@ -11,6 +11,7 @@
             background-color: #f4f4f4;
             padding: 20px;
         }
+
         .container {
             max-width: 900px;
             margin: auto;
@@ -19,62 +20,89 @@
             border-radius: 8px;
             box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
         }
+
         h1 {
             color: #333;
         }
+
         .project {
             border-bottom: 1px solid #ddd;
             padding: 15px 0;
             text-align: left;
         }
+
         .project h2 {
             color: #00736e;
         }
+
         .project p {
             color: #555;
         }
+
         .profile {
-            text-align: left;
-            margin-bottom: 30px;
+            margin-bottom: 20px;
         }
+
         .profile img {
             border-radius: 50%;
             width: 150px;
             height: 150px;
-            margin-bottom: 15px;
+            object-fit: cover;
+        }
+
+        .description {
+            margin-top: 20px;
+        }
+
+        .projects {
+            margin-top: 30px;
+        }
+
+        .projects a {
+            color: #00736e;
+            text-decoration: none;
+        }
+
+        .projects a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
+
     <div class="container">
-        <!-- Présentation personnelle -->
         <div class="profile">
-            <img src="Ma photo de profil.jpg" alt="Votre photo" />
+            <!-- Remplacer cette image par la photo que tu préfères -->
+            <img src="Ma photo de profil.jpeg" alt="Votre photo">
             <h2>Shnide Wesberline Joseph</h2>
-            <p><strong>Âge : 26 ans</strong></p>
-            <p><strong>Origine :</strong> Haïtien</p>
-            <p><strong>Parcours académique :</strong> Titulaire d'un baccalauréat scientifique et d'un bac+4 en sciences économiques reconnu par l'État français. Actuellement en Licence 3, parcours Économie de l’Entreprise, à l’Université de Tours.</p>
+            <p>Âge : 26 ans</p>
+            <p>Origine : Haïtien</p>
+            <p>Parcours académique : Titulaire d’un baccalauréat scientifique et d’un bac+4 en sciences économiques reconnu par l'État français. Actuellement en Licence 3, parcours Économie de l'Entreprise à l'Université de Tours.</p>
             <p>Je me suis toujours intéressé à l'économie en général, et je m'investis dans mes projets de recherche tout en poursuivant mon parcours universitaire.</p>
         </div>
 
         <h1>Mes projets de recherche en Licence</h1>
         <p>Bienvenue sur mon portfolio où je présente mes travaux académiques en économie.</p>
-
-        <p><strong>Découvrir mes travaux de recherche en Licence :</strong> Je vous présente ici mes projets en économie, que vous pouvez consulter et explorer davantage.</p>
-
-        <div class="project">
-            <h2>Projet 1 : Taux d’Intérêt et Inflation</h2>
-            <p><strong>Description :</strong> Étude de l'influence du taux d’intérêt et de l’inflation sur les marchés français.</p>
-            <p><strong>Auteur :</strong> Shnide Wesberline JOSEPH</p>
-            <a href="Projet%201.pdf" target="_blank">Voir le projet</a>
+        <div class="description">
+            <p>Découvrez mes travaux de recherche en Licence : Je vous présente ici mes projets en économie, que vous pouvez consulter et explorer davantage.</p>
         </div>
 
-        <div class="project">
-            <h2>Projet 2 : Analyse de l’évolution de l’intérêt des jeunes pour la politique</h2>
-            <p><strong>Description :</strong> Étude comparant l'intérêt des jeunes (15-24 ans) et des seniors (55-64 ans) pour les élections européennes.</p>
-            <p><strong>Auteurs :</strong> Christ, Shnide, Jules</p>
-            <a href="Projet%202.html" target="_blank">Voir le projet</a>
+        <div class="projects">
+            <div class="project">
+                <h2>Projet 1 : Taux d’Intérêt et Inflation</h2>
+                <p><strong>Description :</strong> Étude de l'influence du taux d'intérêt et de l'inflation sur les marchés français.</p>
+                <p><strong>Auteur :</strong> Shnide Wesberline JOSEPH</p>
+                <a href="Projet%201.pdf" target="_blank">Voir le projet</a>
+            </div>
+
+            <div class="project">
+                <h2>Projet 2 : Analyse de l’évolution de l’intérêt des jeunes pour la politique</h2>
+                <p><strong>Description :</strong> Étude comparant l'intérêt des jeunes (15-24 ans) et des seniors (55-64 ans) pour les élections européennes.</p>
+                <p><strong>Auteurs :</strong> Christ, Shnide, Jules</p>
+                <a href="Projet%202.html" target="_blank">Voir le projet</a>
+            </div>
         </div>
     </div>
+
 </body>
 </html>
