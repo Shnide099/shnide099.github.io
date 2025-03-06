@@ -21,6 +21,7 @@
       }
       h1 {
         color: #0073e6; /* Bleu */
+        text-align: center;
       }
       h2 {
         color: #0073e6; /* Bleu */
@@ -34,14 +35,22 @@
       }
       .profile {
         display: flex;
+        justify-content: center;
         align-items: center;
         margin-bottom: 30px; /* Ajout d'un espace en bas de la section de profil */
       }
       .profile img {
-        width: 200px; /* Augmentation de la taille de l'image */
-        height: 200px; /* Fixe la hauteur pour conserver une image carrée */
+        width: 150px; /* Ajuster la taille de l'image */
+        height: 150px; /* Fixe la hauteur pour rendre l'image carrée */
         border-radius: 50%; /* Rend l'image ronde */
-        margin-right: 20px; /* Ajout d'espace à droite de l'image */
+        margin-right: 20px; /* Ajoute un peu d'espace à droite de l'image */
+      }
+      .text-container {
+        max-width: 600px;
+      }
+      .text-container p {
+        font-size: 16px;
+        line-height: 1.6;
       }
     </style>
   </head>
@@ -49,7 +58,7 @@
     <div class="container">
       <div class="profile">
         <img src="Ma photo de profil.jpg" alt="Shnide Wesberline Joseph">
-        <div>
+        <div class="text-container">
           <h1>Shnide Wesberline Joseph</h1>
           <p><strong>Âge :</strong> 26 ans</p>
           <p><strong>Origine :</strong> Haïtien</p>
