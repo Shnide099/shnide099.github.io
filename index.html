@@ -5,104 +5,91 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio - Mes Projets</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            background-color: #f4f4f4;
-            padding: 20px;
-        }
-
-        .container {
-            max-width: 900px;
-            margin: auto;
-            background: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
-        }
-
-        h1 {
+        body { 
+            font-family: Arial, sans-serif; 
+            background-color: #f4f4f4; 
+            margin: 0;
+            padding: 0;
             color: #333;
         }
-
-        .project {
-            border-bottom: 1px solid #ddd;
-            padding: 15px 0;
-            text-align: left;
+        .container {
+            max-width: 900px; 
+            margin: auto; 
+            padding: 20px;
+            display: flex;
+            flex-direction: row;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
         }
-
-        .project h2 {
+        .left, .right {
+            width: 50%;
+            padding: 20px;
+        }
+        .left img {
+            width: 100%;
+            height: auto;
+            border-radius: 50%;
+        }
+        h1 {
             color: #00736e;
         }
-
+        h2 {
+            color: #00736e;
+        }
+        .project {
+            border-bottom: 1px solid #ddd; 
+            padding: 15px 0; 
+            text-align: left;
+        }
+        .project h3 {
+            color: #00736e;
+        }
         .project p {
             color: #555;
         }
-
-        .profile {
-            margin-bottom: 20px;
-        }
-
-        .profile img {
-            border-radius: 50%;
-            width: 150px;
-            height: 150px;
-            object-fit: cover;
-        }
-
-        .description {
-            margin-top: 20px;
-        }
-
-        .projects {
-            margin-top: 30px;
-        }
-
-        .projects a {
+        .button-link {
             color: #00736e;
             text-decoration: none;
-        }
-
-        .projects a:hover {
-            text-decoration: underline;
         }
     </style>
 </head>
 <body>
 
-    <div class="container">
-        <div class="profile">
-            <!-- Remplacer cette image par la photo que tu préfères -->
-            <img src="Ma photo de profil.jpeg" alt="Votre photo">
-            <h2>Shnide Wesberline Joseph</h2>
-            <p>Âge : 26 ans</p>
-            <p>Origine : Haïtien</p>
-            <p>Parcours académique : Titulaire d’un baccalauréat scientifique et d’un bac+4 en sciences économiques reconnu par l'État français. Actuellement en Licence 3, parcours Économie de l'Entreprise à l'Université de Tours.</p>
-            <p>Je me suis toujours intéressé à l'économie en général, et je m'investis dans mes projets de recherche tout en poursuivant mon parcours universitaire.</p>
-        </div>
+<div class="container">
+    <!-- Left side: Profile info -->
+    <div class="left">
+        <img src="Ma photo de profil.jpg" alt="Photo de profil">
+        <h1>Shnide Wesberline Joseph</h1>
+        <p><strong>Âge : </strong>26 ans</p>
+        <p><strong>Origine : </strong>Haïtien</p>
+        <p><strong>Parcours académique : </strong> Titulaire d'un baccalauréat scientifique et d'un bac+4 en sciences économiques reconnu par l'État français. Actuellement en Licence 3, parcours Économie de l'Entreprise à l'Université de Tours.</p>
+        <p>Je me suis toujours intéressé à l'économie en général, et je m'investis dans mes projets de recherche tout en poursuivant mon parcours universitaire.</p>
+    </div>
 
-        <h1>Mes projets de recherche en Licence</h1>
+    <!-- Right side: Project description -->
+    <div class="right">
+        <h2>Mes projets de recherche en Licence</h2>
         <p>Bienvenue sur mon portfolio où je présente mes travaux académiques en économie.</p>
-        <div class="description">
-            <p>Découvrez mes travaux de recherche en Licence : Je vous présente ici mes projets en économie, que vous pouvez consulter et explorer davantage.</p>
+        <p><strong>Découvrir mes travaux de recherche en Licence :</strong> Je vous présente ici mes projets en économie, que vous pouvez consulter et explorer davantage.</p>
+
+        <!-- Project 1 -->
+        <div class="project">
+            <h3>Projet 1 : Taux d’Intérêt et Inflation</h3>
+            <p><strong>Description :</strong> Étude de l'influence du taux d'intérêt et de l'inflation sur les marchés français.</p>
+            <p><strong>Auteur :</strong> Shnide Wesberline JOSEPH</p>
+            <a href="Projet%201.pdf" class="button-link" target="_blank">Voir le projet</a>
         </div>
 
-        <div class="projects">
-            <div class="project">
-                <h2>Projet 1 : Taux d’Intérêt et Inflation</h2>
-                <p><strong>Description :</strong> Étude de l'influence du taux d'intérêt et de l'inflation sur les marchés français.</p>
-                <p><strong>Auteur :</strong> Shnide Wesberline JOSEPH</p>
-                <a href="Projet%201.pdf" target="_blank">Voir le projet</a>
-            </div>
-
-            <div class="project">
-                <h2>Projet 2 : Analyse de l’évolution de l’intérêt des jeunes pour la politique</h2>
-                <p><strong>Description :</strong> Étude comparant l'intérêt des jeunes (15-24 ans) et des seniors (55-64 ans) pour les élections européennes.</p>
-                <p><strong>Auteurs :</strong> Christ, Shnide, Jules</p>
-                <a href="Projet%202.html" target="_blank">Voir le projet</a>
-            </div>
+        <!-- Project 2 -->
+        <div class="project">
+            <h3>Projet 2 : Analyse de l’évolution de l’intérêt des jeunes pour la politique</h3>
+            <p><strong>Description :</strong> Étude comparant l’intérêt des jeunes (15-24 ans) et des seniors (55-64 ans) pour les élections européennes.</p>
+            <p><strong>Auteurs :</strong> Christ, Shnide, Jules</p>
+            <a href="Projet%202.html" class="button-link" target="_blank">Voir le projet</a>
         </div>
     </div>
+</div>
 
 </body>
 </html>
