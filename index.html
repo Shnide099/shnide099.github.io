@@ -157,22 +157,33 @@
     </form>
 
   <!-- Message de remerciement -->
-        <div id="thank-you-message" class="thank-you-message" style="display: none;">
-          <p>Merci beaucoup pour votre message ! Je reviendrai vers vous dans les plus brefs délais.</p>
+        <div id="thank-you-message" style="display:none;">
+    <p>Merci pour votre message ! Nous vous répondrons dans les plus brefs délais.</p>
+</div>
+
+<script>
+    const form = document.getElementById('contact-form');
+    form.addEventListener('submit', function(event) {
+        event.preventDefault();  // Empêche l'envoi de formulaire de manière traditionnelle
+
+        // Envoi du formulaire avec Formspree
+        fetch(form.action, {
+            method: form.method,
+            body: new FormData(form),
+        })
+        .then(response => {
+            if (response.ok) {
+                document.getElementById('thank-you-message').style.display = 'block';
+                form.reset();
+            }
+        })
+        .catch(error => {
+            console.error('Erreur:', error);
+        });
+    });
+</script>
         </div>
       </div>
    </div>
-
-    <!-- JavaScript pour afficher le message de remerciement après soumission -->
-    <script>
-      const form = document.getElementById('contact-form');
-      const thankYouMessage = document.getElementById('thank-you-message');
-
-      form.addEventListener('submit', function(event) {
-        event.preventDefault(); // Empêche la soumission traditionnelle du formulaire
-        form.style.display = 'none'; // Masque le formulaire
-        thankYouMessage.style.display = 'block'; // Affiche le message de remerciement
-      });
-    </script>
   </body>
 </html>
