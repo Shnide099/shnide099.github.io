@@ -149,33 +149,7 @@
         <input type="reset" value="Réinitialiser">
     </form>
 
- <?php
-        // Vérifier si le formulaire est soumis
-        if ($_SERVER["REQUEST_METHOD"] == "POST") {
-            // Récupérer les données du formulaire
-            $name = $_POST['name'];
-            $email = $_POST['email'];
-            $message = $_POST['message'];
-
-            // Adresse email où les messages seront envoyés
-            $to = "shnidejoseph@icloud.com"; // Remplace par ton adresse email
-            $subject = "Message de contact depuis le site web";
-
-            // Construction du corps de l'email
-            $body = "Nom: $name\nE-mail: $email\nMessage:\n$message";
-
-            // Entêtes pour l'email
-            $headers = "From: $email";
-
-            // Envoi de l'email
-            if (mail($to, $subject, $body, $headers)) {
-                echo '<p class="message">Merci de votre message. Nous vous répondrons dans les plus brefs délais.</p>';
-            } else {
-                echo '<p class="error">Une erreur est survenue lors de l\'envoi du message. Veuillez réessayer plus tard.</p>';
-            }
-        }
-        ?>
-</div>
+    </div>
   
     </div>
   </body>
