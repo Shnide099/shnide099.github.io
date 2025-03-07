@@ -156,16 +156,15 @@
         <button type="submit">Envoyer</button>
     </form>
 
- <!-- Message de remerciement -->
-<div id="thank-you-message" style="display:none;">
+<!-- Message de remerciement -->
+<div id="thank-you-message" style="display: none; margin-top: 20px; text-align: center; background-color: #e0f7fa; padding: 15px; border-radius: 5px; color: #00796b;">
     <p>Merci pour votre message ! Nous vous répondrons dans les plus brefs délais.</p>
 </div>
 
 <script>
     const form = document.getElementById('contact-form');
-
     form.addEventListener('submit', function(event) {
-        event.preventDefault();  // Empêche la soumission traditionnelle du formulaire
+        event.preventDefault(); // Empêche l'envoi du formulaire de manière traditionnelle
 
         // Envoi du formulaire avec Formspree
         fetch(form.action, {
@@ -174,14 +173,13 @@
         })
         .then(response => {
             if (response.ok) {
-                document.getElementById('thank-you-message').style.display = 'block';  // Affiche le message de remerciement
-                form.reset();  // Réinitialise le formulaire
-            } else {
-                console.error('Erreur lors de l\'envoi du formulaire');
+                // Afficher le message de remerciement
+                document.getElementById('thank-you-message').style.display = 'block';
+                form.reset(); // Réinitialiser le formulaire
             }
         })
         .catch(error => {
-            console.error('Erreur :', error);
+            console.error('Erreur:', error);
         });
     });
 </script>
