@@ -158,9 +158,23 @@
 
   <!-- Redirection vers la page Merci.html après soumission -->
 <script>
-    document.querySelector('form').onsubmit = function() {
-        window.location.href = 'https://shnide099.github.io/Merci.html';
-    };
+  document.querySelector('form').onsubmit = function(event) {
+    event.preventDefault();  // Empêche l'envoi de formulaire de manière traditionnelle
+    fetch(form.action, {
+      method: form.method,
+      body: new FormData(form),
+    })
+    .then(response => {
+      if (response.ok) {
+        setTimeout(function(){
+          window.location.href = 'https://shnide099.github.io/Merci.html'; // Redirection après 2 secondes
+        }, 2000); // 2 secondes de délai avant la redirection
+      }
+    })
+    .catch(error => {
+      console.error('Erreur:', error);
+    });
+  };
 </script>
   </body>
 </html>
