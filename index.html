@@ -156,29 +156,11 @@
         <button type="submit">Envoyer</button>
     </form>
 
-<!-- Message de remerciement -->
+  <!-- Redirection vers la page Merci.html après soumission -->
 <script>
-    const form = document.getElementById('contact-form');
-    form.addEventListener('submit', function(event) {
-        event.preventDefault();  // Empêche l'envoi traditionnel du formulaire
-
-        // Envoi du formulaire via Formspree
-        fetch(form.action, {
-            method: form.method,
-            body: new FormData(form),
-        })
-        .then(response => {
-            if (response.ok) {
-                // Redirection vers la page de remerciement
-                window.location.href = 'https://shnide099.github.io/Merci.html';  // Redirige vers la page de remerciement
-            } else {
-                alert("Erreur lors de l'envoi du formulaire. Veuillez réessayer.");
-            }
-        })
-        .catch(error => {
-            console.error('Erreur:', error);
-        });
-    });
+    document.querySelector('form').onsubmit = function() {
+        window.location.href = 'https://shnide099.github.io/Merci.html';
+    };
 </script>
       </div>
    </div>
