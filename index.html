@@ -156,24 +156,25 @@
         <button type="submit">Envoyer</button>
     </form>
 
-<!-- Message de remerciement affiché après soumission -->
+ <!-- Message de remerciement affiché après soumission -->
     <div id="thank-you-message" style="display: none; text-align: center;">
         <h3>Merci pour votre message !</h3>
         <p>Nous vous répondrons dans les plus brefs délais.</p>
     </div>
 
     <script>
-        // Cacher le formulaire et afficher le message de remerciement après soumission
+        // Lorsque le formulaire est soumis
         document.getElementById('contact-form').onsubmit = function(event) {
-            event.preventDefault();  // Empêcher l'envoi immédiat pour voir le message
+            event.preventDefault();  // Empêcher la soumission immédiate pour afficher le message
             document.getElementById('contact-form').style.display = 'none';  // Masquer le formulaire
             document.getElementById('thank-you-message').style.display = 'block';  // Afficher le message de remerciement
 
             // Soumettre le formulaire après un délai de quelques secondes
             setTimeout(function() {
-                event.target.submit();  // Soumettre après avoir montré le message
-            }, 3000);  // Temps de délai de 3 secondes
+                // Soumettre le formulaire à Formspree après 3 secondes
+                event.target.submit();
+            }, 3000);  // Délai de 3 secondes pour afficher le message de remerciement
         };
-    </script>
+    </script> 
   </body>
 </html>
