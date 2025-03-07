@@ -171,17 +171,19 @@
             method: form.method,
             body: new FormData(form),
         })
-        .then(response => {
-            if (response.ok) {
-                // Afficher le message de remerciement
-                document.getElementById('thank-you-message').style.display = 'block';
-                form.reset(); // Réinitialiser le formulaire
-            }
-        })
-        .catch(error => {
-            console.error('Erreur:', error);
-        });
+      .then(response => {
+        if (response.ok) {
+            // Cacher le formulaire et afficher le message de remerciement
+            form.style.display = 'none';
+            document.getElementById('thank-you-message').style.display = 'block';
+        } else {
+            console.error('Erreur lors de l\'envoi du formulaire');
+        }
+    })
+    .catch(error => {
+        console.error('Erreur:', error);
     });
+});
 </script>
       </div>
    </div>
