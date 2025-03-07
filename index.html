@@ -156,19 +156,30 @@
         <button type="submit">Envoyer</button>
     </form>
 
-<!-- Message de remerciement affiché après soumission -->
+<!-- Message de remerciement -->
     <div id="thank-you-message" style="display: none; text-align: center;">
         <h3>Merci pour votre message !</h3>
         <p>Nous vous répondrons dans les plus brefs délais.</p>
     </div>
 
     <script>
-        // Lorsque le formulaire est soumis
-        document.getElementById('contact-form').onsubmit = function() {
-            // Masquer le formulaire et afficher le message de remerciement
-            document.getElementById('contact-form').style.display = 'none';
-            document.getElementById('thank-you-message').style.display = 'block';
+        // Au moment où le formulaire est envoyé, afficher le message de remerciement
+        document.getElementById('contact-form').onsubmit = function(event) {
+            event.preventDefault(); // Empêche l'envoi du formulaire normalement
+            var form = this;
+            var formData = new FormData(form);
+            var xhr = new XMLHttpRequest();
+
+            xhr.open('POST', form.action, true);
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState == 4 && xhr.status == 200) {
+                    // Formulaire envoyé avec succès
+                    form.style.display = 'none';  // Masquer le formulaire
+                    document.getElementById('thank-you-message').style.display = 'block';  // Afficher le message de remerciement
+                }
+            };
+            xhr.send(formData);  // Envoie des données via AJAX
         };
-    </script> 
+    </script>
   </body>
 </html>
