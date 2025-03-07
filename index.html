@@ -52,6 +52,43 @@
         font-size: 16px;
         line-height: 1.6;
       }
+
+/* Ton code d'animation */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  /* Appliquer l'animation aux projets, certificats, et formulaire */
+  .project, .document, .contact {
+    animation: fadeIn 1s ease-in-out;
+    opacity: 0; /* S'assure que l'élément commence invisible */
+    animation-delay: 0.5s; /* Délai léger pour les faire apparaître après le chargement de la page */
+  }
+
+  .thank-you-message {
+    animation: fadeIn 1s ease-in-out;
+    opacity: 0;
+    animation-delay: 1s;
+  }
+
+  /* Ajouter un léger mouvement au survol des liens */
+  a:hover {
+    color: #0073e6; /* Bleu */
+    text-decoration: underline;
+    transition: all 0.3s ease;
+  }
+
+  input[type="submit"]:hover {
+    background-color: #005bb5;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+      
     </style>
   </head>
   <body>
@@ -63,10 +100,19 @@
           <p><strong>Âge :</strong> 26 ans</p>
           <p><strong>Origine :</strong> Haïtien</p>
           <p><strong>Parcours académique :</strong> Titulaire d’un baccalauréat scientifique et d’un bac+4 en sciences économiques reconnu par l’État français. Actuellement en Licence 3, parcours Économie de l’Entreprise à l’Université de Tours.</p>
-          <p>Je me suis toujours intéressé à l’économie en général, et je m’investis dans mes projets de recherche tout en poursuivant mon parcours universitaire.</p>
-        </div>
+           </div>
       </div>
 
+ <!-- À propos de moi -->
+      <div class="about-me">
+        <h2>À propos de moi</h2>
+        <p>Depuis mon plus jeune âge, j'ai toujours été fasciné par l'impact des décisions économiques sur les individus et les sociétés. Étudier l'économie, c'est comprendre les mécanismes qui régissent notre monde, et c'est ce qui m'a poussé à m'investir profondément dans ce domaine. Mon parcours académique, qui m'a mené à obtenir un bac+4 en sciences économiques, est un reflet de ma passion pour l'analyse des systèmes économiques et leur impact sur le bien-être social.</p>
+        <p>Ce qui me motive, c'est la capacité de l'économie à changer la vie des gens. Je suis particulièrement intéressé par l'économie de la santé et l'impact des politiques publiques sur les populations vulnérables. J'aspire à utiliser mes connaissances pour contribuer à l'élaboration de politiques efficaces, qui favorisent un développement économique durable et inclusif.</p>
+        <p>En parallèle de mes études, j'ai cherché à enrichir mon savoir-faire à travers diverses expériences pratiques, notamment dans le cadre de mon stage en gestion médico-économique. Cela m'a permis de comprendre l'importance de l'économie dans la gestion des services de santé et dans l'amélioration de la qualité de vie des citoyens.</p>
+        <p>Je crois fermement que l'économie n'est pas seulement une question de chiffres, mais un moyen d'apporter un changement positif. C'est cette vision qui me pousse à aller toujours plus loin dans mes recherches et mes études. J'espère pouvoir contribuer, à travers mon travail et mes projets, à la construction d'un avenir plus équitable et plus prospère pour tous.</p>
+        <p>Je me suis toujours intéressé à l’économie en général, et je m’investis dans mes projets de recherche tout en poursuivant mon parcours universitaire.</p>
+      </div>     
+      
      <h2>Mes projets, formations et expériences professionnelles</h2>
 
 <p>Bienvenue sur mon portfolio où je présente mes projets de recherche en économie, ainsi que mes expériences professionnelles et formations complémentaires.</p>
@@ -79,14 +125,14 @@
         <h2>Projet 1 : Taux d'Intérêt et Inflation</h2>
         <p><strong>Description :</strong> Étude de l’influence du taux d’intérêt et de l’inflation sur les marchés français.</p>
         <p><strong>Auteur :</strong> Shnide Wesberline JOSEPH</p>
-        <a href="Projet%201.pdf" target="_blank">Voir le projet</a>
+        <a href="Projet%201.pdf" target="_blank"><i class="fas fa-download"></i> Voir le projet</a>
       </div>
 
       <div class="project">
         <h2>Projet 2 : Analyse de l’évolution de l’intérêt des jeunes pour la politique</h2>
         <p><strong>Description :</strong> Étude comparant l'intérêt des jeunes (15-24 ans) et des seniors (55-64 ans) pour les élections européennes.</p>
         <p><strong>Auteurs :</strong> Christ, Shnide, Jules</p>
-        <a href="Projet%202.html" target="_blank">Voir le projet</a>
+        <a href="Projet%202.html" target="_blank"><i class="fas fa-download"></i> Voir le projet</a>
       </div>
 
       <!-- Attestation de reconnaissance du niveau d'études -->
@@ -94,7 +140,7 @@
     <h2>Attestation de reconnaissance du niveau d'études</h2>
     <p><strong>Document :</strong> Attestation délivrée par l'État français confirmant le niveau bac+4 en sciences économiques, reconnu par l'État français.</p>
     <p><strong>Vous pouvez consulter l'attestation en cliquant sur le lien ci-dessous :</strong></p>
-    <a href="Attestation de reconnaissance de niveau etudes en haiti.pdf" target="_blank">Télécharger l'attestation de reconnaissance du niveau d'études</a>
+    <a href="Attestation de reconnaissance de niveau etudes en haiti.pdf" target="_blank"><i class="fas fa-download"></i> Télécharger l'attestation de reconnaissance du niveau d'études</a>
 </div>
       
       <!-- Stage d'observation -->
@@ -110,7 +156,7 @@
                 <li>Réalisation d'études et analyses économiques sur les coûts et financements des projets de l'EHPAD.</li>
             </ul>
             <p><strong>Attestation de stage :</strong> Vous pouvez consulter mon attestation de stage en cliquant sur le lien ci-dessous :</p>
-            <a href="Attestation de stage 2025.pdf" target="_blank">Télécharger l'attestation de stage</a>
+            <a href="Attestation de stage 2025.pdf" target="_blank"><i class="fas fa-download"></i> Télécharger l'attestation de stage</a>
         </div>
 
       <!-- Certificats de formation -->
@@ -127,7 +173,7 @@
     <p><strong>Certificat :</strong> Formation de gestion des affaires et de la législation du travail, délivré par le Réseau des Etudiants en Droit d'Haiti (RENEDH).</p>
     
     <p><strong>Certificats de formation combinés :</strong> Vous pouvez consulter l'ensemble de mes certificats de formation en cliquant sur le lien ci-dessous :</p>
-    <a href="Certificats de formations.pdf" target="_blank">Télécharger les certificats de formation</a>
+    <a href="Certificats de formations.pdf" target="_blank"><i class="fas fa-download"></i> Télécharger les certificats de formation</a>
     </div>
 
     <!-- Formulaire de contact avec mailto pour e-mail -->
@@ -146,8 +192,23 @@
         <button type="submit">Envoyer</button>
     </form>
 
-    </div>
-  
-    </div>
+  <!-- Message de remerciement -->
+        <div id="thank-you-message" class="thank-you-message" style="display: none;">
+          <p>Merci beaucoup pour votre message ! Je reviendrai vers vous dans les plus brefs délais.</p>
+        </div>
+      </div>
+   </div>
+
+    <!-- JavaScript pour afficher le message de remerciement après soumission -->
+    <script>
+      const form = document.getElementById('contact-form');
+      const thankYouMessage = document.getElementById('thank-you-message');
+
+      form.addEventListener('submit', function(event) {
+        event.preventDefault(); // Empêche la soumission traditionnelle du formulaire
+        form.style.display = 'none'; // Masque le formulaire
+        thankYouMessage.style.display = 'block'; // Affiche le message de remerciement
+      });
+    </script>
   </body>
 </html>
