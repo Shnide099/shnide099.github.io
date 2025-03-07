@@ -156,25 +156,24 @@
         <button type="submit">Envoyer</button>
     </form>
 
-  <!-- Redirection vers la page Merci.html après soumission -->
-<script>
-  document.querySelector('form').onsubmit = function(event) {
-    event.preventDefault();  // Empêche l'envoi de formulaire de manière traditionnelle
-    fetch(form.action, {
-      method: form.method,
-      body: new FormData(form),
-    })
-    .then(response => {
-      if (response.ok) {
-        setTimeout(function(){
-          window.location.href = 'https://shnide099.github.io/Merci.html'; // Redirection après 2 secondes
-        }, 2000); // 2 secondes de délai avant la redirection
-      }
-    })
-    .catch(error => {
-      console.error('Erreur:', error);
-    });
-  };
-</script>
+<!-- Message de remerciement affiché après soumission -->
+    <div id="thank-you-message" style="display: none; text-align: center;">
+        <h3>Merci pour votre message !</h3>
+        <p>Nous vous répondrons dans les plus brefs délais.</p>
+    </div>
+
+    <script>
+        // Cacher le formulaire et afficher le message de remerciement après soumission
+        document.getElementById('contact-form').onsubmit = function(event) {
+            event.preventDefault();  // Empêcher l'envoi immédiat pour voir le message
+            document.getElementById('contact-form').style.display = 'none';  // Masquer le formulaire
+            document.getElementById('thank-you-message').style.display = 'block';  // Afficher le message de remerciement
+
+            // Soumettre le formulaire après un délai de quelques secondes
+            setTimeout(function() {
+                event.target.submit();  // Soumettre après avoir montré le message
+            }, 3000);  // Temps de délai de 3 secondes
+        };
+    </script>
   </body>
 </html>
