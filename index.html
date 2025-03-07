@@ -157,33 +157,28 @@
     </form>
 
 <!-- Message de remerciement -->
-<div id="thank-you-message" style="display: none; margin-top: 20px; text-align: center; background-color: #e0f7fa; padding: 15px; border-radius: 5px; color: #00796b;">
-    <p>Merci pour votre message ! Nous vous répondrons dans les plus brefs délais.</p>
-</div>
-
 <script>
     const form = document.getElementById('contact-form');
     form.addEventListener('submit', function(event) {
-        event.preventDefault(); // Empêche l'envoi du formulaire de manière traditionnelle
+        event.preventDefault();  // Empêche l'envoi traditionnel du formulaire
 
-        // Envoi du formulaire avec Formspree
+        // Envoi du formulaire via Formspree
         fetch(form.action, {
             method: form.method,
             body: new FormData(form),
         })
-      .then(response => {
-        if (response.ok) {
-            // Cacher le formulaire et afficher le message de remerciement
-            form.style.display = 'none';
-            document.getElementById('thank-you-message').style.display = 'block';
-        } else {
-            console.error('Erreur lors de l\'envoi du formulaire');
-        }
-    })
-    .catch(error => {
-        console.error('Erreur:', error);
+        .then(response => {
+            if (response.ok) {
+                // Redirection vers la page de remerciement
+                window.location.href = 'https://shnide099.github.io/merci.html';  // Redirige vers la page de remerciement
+            } else {
+                alert("Erreur lors de l'envoi du formulaire. Veuillez réessayer.");
+            }
+        })
+        .catch(error => {
+            console.error('Erreur:', error);
+        });
     });
-});
 </script>
       </div>
    </div>
