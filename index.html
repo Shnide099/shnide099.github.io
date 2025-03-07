@@ -52,43 +52,7 @@
         font-size: 16px;
         line-height: 1.6;
       }
-
-/* Ton code d'animation */
-  @keyframes fadeIn {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-
-  /* Appliquer l'animation aux projets, certificats, et formulaire */
-  .project, .document, .contact {
-    animation: fadeIn 1s ease-in-out;
-    opacity: 0; /* S'assure que l'élément commence invisible */
-    animation-delay: 0.5s; /* Délai léger pour les faire apparaître après le chargement de la page */
-  }
-
-  .thank-you-message {
-    animation: fadeIn 1s ease-in-out;
-    opacity: 0;
-    animation-delay: 1s;
-  }
-
-  /* Ajouter un léger mouvement au survol des liens */
-  a:hover {
-    color: #0073e6; /* Bleu */
-    text-decoration: underline;
-    transition: all 0.3s ease;
-  }
-
-  input[type="submit"]:hover {
-    background-color: #005bb5;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-      
+   
     </style>
   </head>
   <body>
